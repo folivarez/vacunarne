@@ -1,0 +1,35 @@
+{
+  "name": "VACANUNARNE",
+  "version": "0.0.14",
+  "author": "Florencia Solari <fsolari90@gmail.com>",
+  "description": "Mercadolibre SDK module for integration",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mercadolibre/MercadoLibreNode.git"
+  },
+  "keywords": [
+    "api",
+    "mercadolibre",
+    "meli",
+    "sdk",
+    "integration"
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.5.6",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mercadolibre": "0.0.13",
+    "needle": "^0.11.0",
+    "request": "^2.83.0"
+  },
+  "engine": {
+    "node": ">=0.6"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "license": "MIT"
+}
