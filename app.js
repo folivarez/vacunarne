@@ -31,7 +31,21 @@ app.get('/', function (req, res) {
     });
 });
 
+app.get('/alta_producto', function (req, res) {
+
+    res.render('pages/alta_producto', {
+        client_id: config.client_id,
+        secret_key: config.secret_key,
+        redirect_uri: config.redirect_uri,
+        site_id: config.site_id,
+        appname: req.subdomains,
+        Meli:Meli,
+    });
+});
+
 app.get('/productos', product_controller.productList);
+
+app.post('/alta_producto', product_controller.productNew);
 
 
 

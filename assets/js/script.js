@@ -10,7 +10,7 @@ $.get("/productos", function(data) {
             });
             console.log(data._id);
         
-    });
+});
 
 
 /*
