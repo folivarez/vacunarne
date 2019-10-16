@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Official NodeJs SDK for Mercado Libre's API.">
+    <meta name="keywords" content="API, NodeJs, Mercado Libre, SDK, meli, integration, e-commerce">
+    <title>Alta de Producto</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="logo" href="#"><img src="logo-developers.png" alt=""></a>
+        <nav>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a target="_blank" href="http://developers.mercadolibre.com/getting-started/">Getting Started</a></li>
+                <li><a target="_blank" href="http://developers.mercadolibre.com/api-docs/">API Docs</a></li>
+                <li><a target="_blank" href="http://developers.mercadolibre.com/community/">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header">
+        <div>
+            <h1>Vacunarne</h1>
+            <p>Alta de Producto</p>
+        </div>
+    </div>
+
+    <main class="container">
+       
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Categorias</h3>
+                <select id="categorias"></select> 
+            </div>
+            <div class="col-md-6">
+                <h3>Next steps</h3>
+                <p>To start, <a href="https://developers.mercadolibre.com.ar/apps/home">go to your My Apps dashboard</a> and update your application's <b>redirect URI</b> to match the one Heroku is running: <br />
+                    <br />
+                    <br /> If you deployed this app by the Heroku Button, you need to clone this aplication to your computer by running the following on a command line shell:
+                    <br />
+                    <code>heroku git:remote -a <%= appname %></code>
+                    <br /> This will create a local copy of the source code, and associate the Heroku app with your local repository.</p>
+                    <p>Follow the offical Heroku's guide <a target="_blank" href="https://devcenter.heroku.com/articles/git">https://devcenter.heroku.com/articles/git</a> to deploy using the Heroku cli.</p>
+                    <p>You'll now be set up to run the app locally, or deploy changes to Heroku.</p>
+                </div>
+        </div>
+
+
+</main>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+</body>
+
+</html>
