@@ -12,6 +12,31 @@ $.get("/productos", function(data) {
         
 });
 
+/*
+
+{
+"title":"Item de test - No Ofertar Vacunarne",
+"category_id":"MLA1417",
+"price":"1000",
+"currency_id":"ARS",
+"available_quantity":1,
+"buying_mode":"buy_it_now",
+"listing_type_id":"gold_special",
+"description": { "plain_text":"Item de test - No Ofertar ASADO VACIO Vacunarne - X MAYOR Y MENOR !!! El Precio es x kg TRABAJAMOS TODOS LOS CORTES!!!"},
+"video_id": "",
+"attributes": [
+{ "id" : "ITEM_CONDITION", "value_id": "2230284"} 
+],
+"sale_terms":[
+{"id": "WARRANTY_TYPE", "value_id": "2230279" },
+{"id": "WARRANTY_TIME", "value_name": "90 dias"}
+],
+"pictures":[
+{"source":"https://www.elliberal.com.ar/fotos/cache/notas/2016/10/11/937x553_293883_20161011111808.jpg"}
+]
+}
+
+*/
 
 /*
     $.get("/castraciones/getAviso/web", function(data) {

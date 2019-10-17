@@ -25,7 +25,6 @@ exports.productNew = function(req, res) {
 			"buying_mode":"buy_it_now",
 			"listing_type_id":"gold_special",
 			"description": "Item de test - No Ofertar",
-			"video_id": "YOUTUBE_ID_HERE",
 			"attributes": [
 				{ "id" : "ITEM_CONDITION", "value_id": "2230582"} 
 			],
@@ -38,7 +37,7 @@ exports.productNew = function(req, res) {
 			]
 		};
 
-		meliObject.put(config.config.api_root_url + '/item',producto,'{"access_token":"APP_USR-3265451425852245-101501-5274096e8042797e37ccf9b085a12e5c-1366203"}', function (err, categorias) {
+		meliObject.post(config.config.api_root_url + '/item',producto,'access_token=APP_USR-3265451425852245-101501-5274096e8042797e37ccf9b085a12e5c-1366203', function (err, categorias) {
 			console.log(err);
       
        		res.send(categorias);  
