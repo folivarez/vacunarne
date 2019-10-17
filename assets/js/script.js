@@ -12,15 +12,17 @@ var token = 'APP_USR-3265451425852245-101703-b847d72e3c0af6200a6e65551a680065-47
         var title = $("#title").val();
         var description = $("#description").val();
         var image = $("#picture").val();
+        var price = $("#price").val();
+        var count = $("#count").val();
 
         console.log("dando de alta " + title + ' ' + description + ' ' + image );
 
         var product = {
                         "title": "Item de test - No Ofertar " + title,
                         "category_id":"MLA1417",
-                        "price":"1000",
+                        "price":price,
                         "currency_id":"ARS",
-                        "available_quantity":1,
+                        "available_quantity":count,
                         "buying_mode":"buy_it_now",
                         "listing_type_id":"gold_special",
                         "description": { "plain_text": "Item de test - No Ofertar " + description},
