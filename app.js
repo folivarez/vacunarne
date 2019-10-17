@@ -45,7 +45,9 @@ app.get('/alta_producto', function (req, res) {
 
 app.get('/productos', product_controller.productList);
 
-app.post('/alta_producto', product_controller.productNew);
+app.post('/token', product_controller.token);
+
+app.post('/autorizacion', product_controller.autorizacion);
 
 
 

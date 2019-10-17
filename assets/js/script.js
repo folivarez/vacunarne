@@ -1,16 +1,59 @@
-$(window).load(function() {
-
-console.log("ok");
+$(document).ready(function() {
 
 
+var token = 'APP_USR-3265451425852245-101702-f213e4f33eef3b78093eb8c064c49053-1366203';
 
-$.get("/productos", function(data) {
-           $.each(data, function(key, value) {
-                $("#categorias").append($('<option></option>').attr('value', value.id).text(value.name));
-            });
-            console.log(data._id);
+
+
+
+ $("#submit").click(function(e) {
+        e.preventDefault();
+
+        var title = $("#title").val();
+        var description = $("#description").val();
+        var image = $("#picture").val();
+
+        console.log("dando de alta " + title + ' ' + description + ' ' + image );
+
+        var product = {
+                        "title": "Item de test - No Ofertar " + title,
+                        "category_id":"MLA1417",
+                        "price":"1000",
+                        "currency_id":"ARS",
+                        "available_quantity":1,
+                        "buying_mode":"buy_it_now",
+                        "listing_type_id":"gold_special",
+                        "description": { "plain_text": "Item de test - No Ofertar " + description},
+                        "video_id": "",
+                        "attributes": [
+                            { "id" : "ITEM_CONDITION", "value_id": "2230284"} 
+                        ],
+                        "sale_terms":[
+                            {"id": "WARRANTY_TYPE", "value_id": "2230279" },
+                            {"id": "WARRANTY_TIME", "value_name": "90 dias"}
+                        ],
+                        "pictures":[
+                            {"source":image}
+                        ]
+                    };
+        console.log(product);
+
+        $.ajax({
+        type: "POST",
+        //the url where you want to sent the userName and password to
+        url: "https://api.mercadolibre.com/items?access_token=" + token,
+        dataType: 'json',
+        async: false,
+        //json object to sent to the authentication url
+        data: JSON.stringify(product),
+        success: function () {
+            location.reload();
+        }
         
-});
+    });
+        
+       
+    });
 
 /*
 
